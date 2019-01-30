@@ -1,0 +1,7 @@
+<% @todos.each do |todo| %>
+ <%= todo.description %>
+ <%= todo.completed %>
+ <%= link_to "Show", show_path(todo.id) %>
+ <%= link_to "borrar", todos_path, method: :delete %>
+<% end %>
+
