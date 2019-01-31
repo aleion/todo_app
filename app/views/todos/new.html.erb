@@ -2,13 +2,13 @@
 <div class="col-sm-4"></div>
 <div class="well text-center col-sm-4">
 <%= form_with(model: @todo, local: true) do |f| %>
- <%= f.label :Tarea %>
- <%= f.text_field :description%>
+ <%= f.label 'Tarea:', :class => 'title-dos' %>
+ <%= f.text_field :description, :class => 'form-control'%>
  <%= f.check_box :completed,:style => 'visibility: hidden' %>
 
+<br>
 
-
- <%= f.submit :crear, :class => 'btn btn-primary' %>
+ <%= f.submit :crear, :class => 'btn btn-danger' %>
 <% end %>
 </div>
 </div>

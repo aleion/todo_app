@@ -3,10 +3,10 @@
 <div class="well text-center">
 
 <%= form_with(model: @todo, local: true) do |f| %>
- <%= f.label :Tarea %>
- <%= f.text_field :description %>
-
- <%= f.submit :Actualizar, :class => 'btn btn-primary' %>
+ <%= f.label :Tarea, :class => 'title-dos'%>
+ <%= f.text_field :description, :class => 'form-control' %>
+ <br>
+ <%= f.submit :Actualizar, :class => 'btn btn-success' %>
 <% end %>
 </div>
 </div>

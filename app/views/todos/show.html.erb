@@ -1,5 +1,7 @@
 <div class="well text-center">
-<h1><%= @todo.description %></h1>
-<p>Created <%= time_ago_in_words @todo.created_at %></p>
-<button class="btn btn-outline-light"><%= link_to "Volver", todos_path %></button>
+<p class="title"><%= @todo.description %></p>
+<p class="cr_ag">Created <%= time_ago_in_words @todo.created_at %></p>
+<p><%= link_to todos_path do %></p>
+<i class="fa fa-3x fa-arrow-circle-left" style="color:red;opacity:.8;"></i>
+<% end %>
 </div>
