@@ -1,8 +1,24 @@
-<p><%= @todos.each do |todo| %></p>
- <%= todo.description %>
- <%= todo.completed %>
- <%= link_to "Show", show_path(todo.id) %>
- <%= link_to "Edit", edit_path(todo.id) %>
- <%= link_to "borrar", todos_path, method: :delete %>
-<% end %>
 
+        
+        <div class="container">
+        <% @todos.each do |todo| %>
+        <div class="well text-center ">
+        <h3 class="mb-0"><strong><%= todo.description%></strong></h3>
+        <p class="mb-0">Completado: <%= todo.completed%></p>
+        <p><small>Creado <%= time_ago_in_words todo.created_at %> ago</small></p>
+        <div><%= link_to 'Complete', complete_todo_path(todo.id) %>
+        <%= link_to image_tag('show.png'), todo %>
+        <%= link_to image_tag('edit.png'), edit_todo_path(todo.id)%>
+        <%= link_to image_tag('delete.png'), todo, method: :delete%>
+        </div>
+        </div>  
+
+        <% end %>
+            <div class="well text-center">
+            <%= link_to image_tag('plus.png'), todos_new_path%>
+            </div>
+        </div>
+
+        
+
+    

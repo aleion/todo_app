@@ -1,6 +1,14 @@
+<div class="container">
+<div class="col-sm-4"></div>
+<div class="well text-center col-sm-4">
 <%= form_with(model: @todo, local: true) do |f| %>
- <%= f.label :description %>
- <%= f.text_field :description %>
+ <%= f.label :Tarea %>
+ <%= f.text_field :description%>
+ <%= f.check_box :completed,:style => 'visibility: hidden' %>
+
+
 
  <%= f.submit :crear, :class => 'btn btn-primary' %>
 <% end %>
+</div>
+</div>

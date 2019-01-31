@@ -1,3 +1,5 @@
+<div class="well text-center">
 <h1><%= @todo.description %></h1>
 <p>Created <%= time_ago_in_words @todo.created_at %></p>
-<button><%= link_to "Volver", todos_path %></button>
+<button class="btn btn-outline-light"><%= link_to "Volver", todos_path %></button>
+</div>
